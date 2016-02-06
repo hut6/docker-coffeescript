@@ -1,8 +1,6 @@
 FROM alpine:3.1
-
-ARG COFFEE_VERSION
-RUN apk --update add nodejs && \
-    npm install -g coffee-script@$COFFEE_VERSION
+RUN apk --update add nodejs && npm install -g coffee-script@1.6.0
 
 # simple tests
-RUN coffee --version | grep $COFFEE_VERSION
+RUN coffee --version | grep 1.6.0
+
