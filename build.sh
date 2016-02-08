@@ -9,9 +9,9 @@ RUN apk --update add nodejs && npm install -g coffee-script@$VERSION && rm -rf /
 # Test
 RUN coffee --version | grep $VERSION
 
-ENTRYPOINT [ "coffee" ]
+ENTRYPOINT [ \"coffee\" ]
 " > Dockerfile
 
 git commit -am "Version $VERSION"
 git tag -f $VERSION
-git push --force origin $VERSION;
+#git push --force origin $VERSION;
